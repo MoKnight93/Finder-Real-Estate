@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Finder - a front-end demo clone of the Createx Finder real estate template. Not a real service.">
+    <title>Finder | Real Estate - Homepage</title>
+    <link rel="alternate" hreflang="ar" href="index.html">
+    <link rel="alternate" hreflang="en" href="index-en.html">
+    <script>
+    // Apply the saved theme before first paint (no white flash in dark mode)
+    (function () {
+        try {
+            var c = localStorage.getItem('theme');
+            var dark = c === 'dark' || (c === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+            document.documentElement.setAttribute('data-bs-theme', dark ? 'dark' : 'light');
+        } catch (e) {}
+    })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Assets/Vendor/fontawesome-free-6.7.2-web/fontawesome-free-6.7.2-web/css/all.css">
+    <link rel="stylesheet" href="./Assets/Vendor/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./dark-mode.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container d-none d-lg-flex align-items-center">
+            <a class="navbar-brand d-flex gap-2" href="#">
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34" class="d-inline-block align-text-top">
+                  <path
+                    d="M34.5 16.894v10.731c0 3.506-2.869 6.375-6.375 6.375H17.5h-.85C7.725 33.575.5 26.138.5 17c0-9.35 7.65-17 17-17s17 7.544 17 16.894z"
+                    fill="#D95150" />
+                  <g fill-rule="evenodd">
+                    <path
+                      d="M17.5 13.258c-3.101 0-5.655 2.554-5.655 5.655s2.554 5.655 5.655 5.655 5.655-2.554 5.655-5.655-2.554-5.655-5.655-5.655zm-9.433 5.655c0-5.187 4.246-9.433 9.433-9.433s9.433 4.246 9.433 9.433a9.36 9.36 0 0 1-1.569 5.192l2.397 2.397a1.89 1.89 0 0 1 0 2.671 1.89 1.89 0 0 1-2.671 0l-2.397-2.397a9.36 9.36 0 0 1-5.192 1.569c-5.187 0-9.433-4.246-9.433-9.433z"
+                      fill="#000" fill-opacity=".05" />
+                    <g fill="#fff">
+                      <path
+                        d="M17.394 10.153c-3.723 0-6.741 3.018-6.741 6.741s3.018 6.741 6.741 6.741 6.741-3.018 6.741-6.741-3.018-6.741-6.741-6.741zM7.347 16.894A10.05 10.05 0 0 1 17.394 6.847 10.05 10.05 0 0 1 27.44 16.894 10.05 10.05 0 0 1 17.394 26.94 10.05 10.05 0 0 1 7.347 16.894z" />
+                      <path
+                        d="M23.025 22.525c.645-.645 1.692-.645 2.337 0l3.188 3.188c.645.645.645 1.692 0 2.337s-1.692.645-2.337 0l-3.187-3.187c-.645-.646-.645-1.692 0-2.337z" />
+                    </g>
+                  </g>
+                  <path
+                    d="M23.662 14.663c2.112 0 3.825-1.713 3.825-3.825s-1.713-3.825-3.825-3.825-3.825 1.713-3.825 3.825 1.713 3.825 3.825 3.825z"
+                    fill="#fff" />
+                  <path fill-rule="evenodd"
+                    d="M23.663 8.429a2.41 2.41 0 0 0-2.408 2.408 2.41 2.41 0 0 0 2.408 2.408 2.41 2.41 0 0 0 2.408-2.408 2.41 2.41 0 0 0-2.408-2.408zm-5.242 2.408c0-2.895 2.347-5.242 5.242-5.242s5.242 2.347 5.242 5.242-2.347 5.242-5.242 5.242-5.242-2.347-5.242-5.242z"
+                    fill="#D95150" />
+                </svg>
+              </span>
+              <span class="fs-4 fw-semibold text-body">Finder</span>
+            </a>
+      
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Home
+                  <img src="./Assets/Images/download (1).svg" class="dropdown-icon me-2 ms-1" alt="">
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item Drop-Item" href="#">Real Estate</a></li>
+                  <li><a class="dropdown-item Drop-Item" href="#">Cars</a></li>
+                  <li><a class="dropdown-item Drop-Item" href="#">Contractors</a></li>
+                  <li><a class="dropdown-item Drop-Item" href="#">Doctors</a></li>
+                  <li><a class="dropdown-item Drop-Item" href="#">Events</a></li>
+                  <li><a class="dropdown-item Drop-Item" href="#">City Guide</a></li>
+                </ul>
+              </li>
+      
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Listings
+                  <img src="./Assets/Images/download (1).svg" class="dropdown-icon me-2 ms-1" alt="">
+                </a>
+                <ul class="dropdown-menu">
+                  <li><span class="dropdown-header">Real Estate</span></li>
+                  <li><a class="dropdown-item Drop-Item" href="#">Map/Listings Split View</a></li>
+                  <li><a class="dropdown-item Drop-Item" href="#">Property Details Page</a></li>
+                  <li><a class="dropdown-item Drop-Item" href="#">Vendor Page</a></li>
+      
+                  <li><span class="dropdown-header">Cars</span></li>
+                  <li><a class="dropdown-item Drop-Item" href="#">Listings Grid View</a></li>
+                  <li><a class="dropdown-item Drop-Item" href="#">Listings List View</a></li>
+                  <li><a class="dropdown-item Drop-Item" href="#">Car Details Page</a></li>
+      
+                  <li><span class="dropdown-header">Contractors</span></li>
+                  <li><a class="dropdown-item Drop-Item" href="#">Listings with Side Filters</a></li>
+                  <li><a class="dropdown-item Drop-Item" href="#">Contractor Details Page</a></li>
+      
+                  <li><span class="dropdown-header">Doctors</span></li>
+                  <li><a class="dropdown-item Drop-Item" href="#">Listings List View</a></li>
+                  <li><a class="dropdown-item Drop-Item" href="#">Listings Grid View</a></li>
+                  <li><a class="dropdown-item Drop-Item" href="#">Doctor Details Page</a></li>
+      
+                  <li><span class="dropdown-header">Events</span></li>
+                  <li><a class="dropdown-item Drop-Item" href="#">Listings with Top Filters</a></li>
+                  <li><a class="dropdown-item Drop-Item" href="#">Event Details Page</a></li>
+      
+                  <li><span class="dropdown-header">City Guide</span></li>
+                  <li><a class="dropdown-item Drop-Item" href="#">Listings with Side Filters</a></li>
+                  <li><a class="dropdown-item Drop-Item" href="#">Listings with Top Filters</a></li>
+                  <li><a class="dropdown-item Drop-Item" href="#">Place Details Page</a></li>
+      
+                  <li><span class="dropdown-header">Add Property</span></li>
+                  <li><a class="dropdown-item Drop-Item" href="#">Property Type</a></li>
+                  <li><a class="dropdown-item Drop-Item" href="#">Location</a></li>
+                  <li><a class="dropdown-item Drop-Item" href="#">Photos and Videos</a></li>
+                  <li><a class="dropdown-item Drop-Item" href="#">Property Details</a></li>
+                  <li><a class="dropdown-item Drop-Item" href="#">Price</a></li>
+                  <li><a class="dropdown-item Drop-Item" href="#">Contact Info</a></li>
+                  <li><a class="dropdown-item Drop-Item" href="#">Ad Promotion</a></li>
+      
+                  <li><span class="dropdown-header">Add Contractor</span></li>
+                  <li><a class="dropdown-item Drop-Item" href="#">Business Location</a></li>
+                  <li><a class="dropdown-item Drop-Item" href="#">Choose Services</a></li>
+                  <li><a class="dropdown-item Drop-Item" href="#">Profile Details</a></li>
+                  <li><a class="dropdown-item Drop-Item" href="#">Price and Hours</a></li>
+                  <li><a class="dropdown-item Drop-Item" href="#">Create First Project</a></li>
+      
+                  <li><span class="dropdown-header">Add (Sell) Car</span></li>
+                  <li><a class="dropdown-item" href="#">Add (Sell) Car Page</a></li>
+                </ul>
+              </li>
+      
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Account
+                  <img src="./Assets/Images/download (1).svg" class="dropdown-icon me-2 ms-1" alt="">
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="dropend">
+                    <a class="dropdown-item Drop-Item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Auth Pages
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item Drop-Item" href="#">Sign In</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Sign Up</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Password Recovery</a></li>
+                    </ul>
+                  </li>
+      
+                  <li><a class="dropdown-item Drop-Item" href="#">My Profile</a></li>
+                  <li><a class="dropdown-item Drop-Item" href="#">My Listings</a></li>
+                  <li><a class="dropdown-item Drop-Item" href="#">Reviews</a></li>
+                  <li><a class="dropdown-item Drop-Item" href="#">Favorites</a></li>
+                  <li><a class="dropdown-item Drop-Item" href="#">Payment Details</a></li>
+                  <li><a class="dropdown-item Drop-Item" href="#">Account Settings</a></li>
+                </ul>
+              </li>
+      
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Pages
+                  <img src="./Assets/Images/download (1).svg" class="dropdown-icon me-2 ms-1" alt="">
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="dropend">
+                    <a class="dropdown-item Drop-Item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      About
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item Drop-Item" href="#">About v.1</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">About v.2</a></li>
+                    </ul>
+                  </li>
+      
+                  <li class="dropend">
+                    <a class="dropdown-item Drop-Item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Blog
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item Drop-Item" href="#">Blog Layout v.1</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Blog Layout v.2</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Blog Layout v.3</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Blog Layout v.4</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Single Post v.1</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Single Post v.2</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Single Post v.3</a></li>
+                    </ul>
+                  </li>
+      
+                  <li class="dropend">
+                    <a class="dropdown-item Drop-Item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Contact
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item Drop-Item" href="#">Contact v.1</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Contact v.2</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Contact v.3</a></li>
+                    </ul>
+                  </li>
+      
+                  <li class="dropend">
+                    <a class="dropdown-item Drop-Item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Help Center
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item Drop-Item" href="#">Help Topics v.1</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Help Topics v.2</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Help Topics v.3</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Help Single Article v.1</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Help Single Article v.2</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Help Single Article v.3</a></li>
+                    </ul>
+                  </li>
+      
+                  <li class="dropend">
+                    <a class="dropdown-item Drop-Item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      404 Error
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item Drop-Item" href="#">Background Image (Real Estate)</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Icon Image (Cars)</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Split Screen (Contractors)</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Illustration (City Guide)</a></li>
+                    </ul>
+                  </li>
+      
+                  <li><a class="dropdown-item Drop-Item" href="#">Terms & Conditions</a></li>
+                </ul>
+              </li>
+      
+              <li class="nav-item">
+                <a class="nav-link" href="#">Docs</a>
+              </li>
+      
+              <li class="nav-item">
+                <a class="nav-link" href="#">Components</a>
+              </li>
+            </ul>
+      
+            <div class="d-flex align-items-center ms-auto">
+              <div class="dropdown me-3">
+                <button class="btn btn-link text-decoration-none" type="button" data-bs-toggle="dropdown">
+                  <img src="./Assets/Images/language-outline.svg" class="icon-lg" alt="Language">
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item Drop-Item" href="index-en.html" hreflang="en" lang="en" data-lang="en">English</a></li>
+                  <li><a class="dropdown-item Drop-Item" href="index.html" hreflang="ar" lang="ar" data-lang="ar">Arabic</a></li>
+                </ul>
+              </div>
+      
+              <div class="dropdown">
+                <button class="btn btn-link text-decoration-none" type="button" data-bs-toggle="dropdown">
+                  <img src="./Assets/Images/sunny-outline.svg" class="icon-lg" alt="Theme">
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item Drop-Item" href="#" data-theme="light">Light Mode</a></li>
+                  <li><a class="dropdown-item Drop-Item" href="#" data-theme="dark">Dark Mode</a></li>
+                        <li><a class="dropdown-item Drop-Item" href="#" data-theme="auto">System</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+      
+          <div class="container-fluid d-lg-none flex-nowrap">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+      
+            <a class="navbar-brand mx-auto" href="#">
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34" class="d-inline-block align-text-top">
+                  <path
+                    d="M34.5 16.894v10.731c0 3.506-2.869 6.375-6.375 6.375H17.5h-.85C7.725 33.575.5 26.138.5 17c0-9.35 7.65-17 17-17s17 7.544 17 16.894z"
+                    fill="#D95150" />
+                  <g fill-rule="evenodd">
+                    <path
+                      d="M17.5 13.258c-3.101 0-5.655 2.554-5.655 5.655s2.554 5.655 5.655 5.655 5.655-2.554 5.655-5.655-2.554-5.655-5.655-5.655zm-9.433 5.655c0-5.187 4.246-9.433 9.433-9.433s9.433 4.246 9.433 9.433a9.36 9.36 0 0 1-1.569 5.192l2.397 2.397a1.89 1.89 0 0 1 0 2.671 1.89 1.89 0 0 1-2.671 0l-2.397-2.397a9.36 9.36 0 0 1-5.192 1.569c-5.187 0-9.433-4.246-9.433-9.433z"
+                      fill="#000" fill-opacity=".05" />
+                    <g fill="#fff">
+                      <path
+                        d="M17.394 10.153c-3.723 0-6.741 3.018-6.741 6.741s3.018 6.741 6.741 6.741 6.741-3.018 6.741-6.741-3.018-6.741-6.741-6.741zM7.347 16.894A10.05 10.05 0 0 1 17.394 6.847 10.05 10.05 0 0 1 27.44 16.894 10.05 10.05 0 0 1 17.394 26.94 10.05 10.05 0 0 1 7.347 16.894z" />
+                      <path
+                        d="M23.025 22.525c.645-.645 1.692-.645 2.337 0l3.188 3.188c.645.645.645 1.692 0 2.337s-1.692.645-2.337 0l-3.187-3.187c-.645-.646-.645-1.692 0-2.337z" />
+                    </g>
+                  </g>
+                  <path
+                    d="M23.662 14.663c2.112 0 3.825-1.713 3.825-3.825s-1.713-3.825-3.825-3.825-3.825 1.713-3.825 3.825 1.713 3.825 3.825 3.825z"
+                    fill="#fff" />
+                  <path fill-rule="evenodd"
+                    d="M23.663 8.429a2.41 2.41 0 0 0-2.408 2.408 2.41 2.41 0 0 0 2.408 2.408 2.41 2.41 0 0 0 2.408-2.408 2.41 2.41 0 0 0-2.408-2.408zm-5.242 2.408c0-2.895 2.347-5.242 5.242-5.242s5.242 2.347 5.242 5.242-2.347 5.242-5.242 5.242-5.242-2.347-5.242-5.242z"
+                    fill="#D95150" />
+                </svg>
+              </span>
+              <span class="fs-4 fw-semibold text-body">Finder</span>
+            </a>
+      
+            <div class="d-flex align-items-center ms-auto">
+              <div class="dropdown me-3">
+                <button class="btn btn-link text-decoration-none" type="button" data-bs-toggle="dropdown">
+                  <img src="./Assets/Images/language-outline.svg" class="icon-lg" alt="Language">
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item Drop-Item" href="index-en.html" hreflang="en" lang="en" data-lang="en">English</a></li>
+                  <li><a class="dropdown-item Drop-Item" href="index.html" hreflang="ar" lang="ar" data-lang="ar">Arabic</a></li>
+                </ul>
+              </div>
+      
+              <div class="dropdown">
+                <button class="btn btn-link text-decoration-none" type="button" data-bs-toggle="dropdown">
+                  <img src="./Assets/Images/sunny-outline.svg" class="icon-lg" alt="Theme">
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item Drop-Item" href="#" data-theme="light">Light Mode</a></li>
+                  <li><a class="dropdown-item Drop-Item" href="#" data-theme="dark">Dark Mode</a></li>
+                        <li><a class="dropdown-item Drop-Item" href="#" data-theme="auto">System</a></li>
+                </ul>
+              </div>
+            </div>
+      
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav me-auto">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Home
+                    </a>
+                    <ul class="dropdown-menu border-0">
+                      <li><a class="dropdown-item Drop-Item" href="#">Real Estate</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Cars</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Contractors</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Doctors</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Events</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">City Guide</a></li>
+                    </ul>
+                  </li>
+      
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Listings
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><span class="dropdown-header">Real Estate</span></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Map/Listings Split View</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Property Details Page</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Vendor Page</a></li>
+      
+                      <li><span class="dropdown-header">Cars</span></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Listings Grid View</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Listings List View</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Car Details Page</a></li>
+      
+                      <li><span class="dropdown-header">Contractors</span></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Listings with Side Filters</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Contractor Details Page</a></li>
+      
+                      <li><span class="dropdown-header">Doctors</span></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Listings List View</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Listings Grid View</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Doctor Details Page</a></li>
+      
+                      <li><span class="dropdown-header">Events</span></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Listings with Top Filters</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Event Details Page</a></li>
+      
+                      <li><span class="dropdown-header">City Guide</span></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Listings with Side Filters</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Listings with Top Filters</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Place Details Page</a></li>
+      
+                      <li><span class="dropdown-header">Add Property</span></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Property Type</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Location</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Photos and Videos</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Property Details</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Price</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Contact Info</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Ad Promotion</a></li>
+      
+                      <li><span class="dropdown-header">Add Contractor</span></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Business Location</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Choose Services</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Profile Details</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Price and Hours</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Create First Project</a></li>
+      
+                      <li><span class="dropdown-header">Add (Sell) Car</span></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Add (Sell) Car Page</a></li>
+                    </ul>
+                  </li>
+      
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Account
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li class="dropend">
+                        <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Auth Pages
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item Drop-Item" href="#">Sign In</a></li>
+                          <li><a class="dropdown-item Drop-Item" href="#">Sign Up</a></li>
+                          <li><a class="dropdown-item Drop-Item" href="#">Password Recovery</a></li>
+                        </ul>
+                      </li>
+      
+                      <li><a class="dropdown-item Drop-Item" href="#">My Profile</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">My Listings</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Reviews</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Favorites</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Payment Details</a></li>
+                      <li><a class="dropdown-item Drop-Item" href="#">Account Settings</a></li>
+                    </ul>
+                  </li>
+      
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Pages
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li class="dropend">
+                        <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          About
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item Drop-Item" href="#">About v.1</a></li>
+                          <li><a class="dropdown-item Drop-Item" href="#">About v.2</a></li>
+                        </ul>
+                      </li>
+      
+                      <li class="dropend">
+                        <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Blog
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item Drop-Item" href="#">Blog Layout v.1</a></li>
+                          <li><a class="dropdown-item Drop-Item" href="#">Blog Layout v.2</a></li>
+                          <li><a class="dropdown-item Drop-Item" href="#">Blog Layout v.3</a></li>
+                          <li><a class="dropdown-item Drop-Item" href="#">Blog Layout v.4</a></li>
+                          <li><a class="dropdown-item Drop-Item" href="#">Single Post v.1</a></li>
+                          <li><a class="dropdown-item Drop-Item" href="#">Single Post v.2</a></li>
+                          <li><a class="dropdown-item Drop-Item" href="#">Single Post v.3</a></li>
+                        </ul>
+                      </li>
+      
+                      <li class="dropend">
+                        <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Contact
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item Drop-Item" href="#">Contact v.1</a></li>
+                          <li><a class="dropdown-item Drop-Item" href="#">Contact v.2</a></li>
+                          <li><a class="dropdown-item Drop-Item" href="#">Contact v.3</a></li>
+                        </ul>
+                      </li>
+      
+                      <li class="dropend">
+                        <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Help Center
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item Drop-Item" href="#">Help Topics v.1</a></li>
+                          <li><a class="dropdown-item Drop-Item" href="#">Help Topics v.2</a></li>
+                          <li><a class="dropdown-item Drop-Item" href="#">Help Topics v.3</a></li>
+                          <li><a class="dropdown-item Drop-Item" href="#">Help Single Article v.1</a></li>
+                          <li><a class="dropdown-item Drop-Item" href="#">Help Single Article v.2</a></li>
+                          <li><a class="dropdown-item Drop-Item" href="#">Help Single Article v.3</a></li>
+                        </ul>
+                      </li>
+      
+                      <li class="dropend">
+                        <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          404 Error
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item Drop-Item" href="#">Background Image (Real Estate)</a></li>
+                          <li><a class="dropdown-item Drop-Item" href="#">Icon Image (Cars)</a></li>
+                          <li><a class="dropdown-item Drop-Item" href="#">Split Screen (Contractors)</a></li>
+                          <li><a class="dropdown-item Drop-Item" href="#">Illustration (City Guide)</a></li>
+                        </ul>
+                      </li>
+      
+                      <li><a class="dropdown-item Drop-Item" href="#">Terms & Conditions</a></li>
+                    </ul>
+                  </li>
+      
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Docs</a>
+                  </li>
+      
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Components</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="scroll-indicator">
+            <div class="progress-bar"></div>
+        </div>
+    </header>
+    <!------------------------------------------------------------------------------>
+    <main>
+        <div class="first-block">
+            <div class="first-block-background row w-100 d-flex">
+                <div class="col-6 d-none d-md-block ri">
+                    <img src="./Assets/Images/01 (1).jpg" alt="">
+                    <p>Buy</p>
+                </div>
+                <div class="col-3 d-none d-md-block mi">
+                    <img src="./Assets/Images/02.png" alt="">
+                    <p>Sell</p>
+                </div>
+                <div class="col-3 d-none d-md-block lf">
+                    <img src="./Assets/Images/03 (1).jpg" alt="">
+                    <p>Rent</p>
+                </div>
+            </div>
+
+            <div class="first-block-content container">
+                <div class="row pt-lg-3 pt-xl-0 pt-xxl-4 pb-4 pb-md-5 pb-xl-0">
+                                <div class="col-md-6 col-xxl-5 text-center text-md-start">
+                                    <h1 class="display-4 pb-2">Easy way to find a perfect property</h1>
+                                    <p class="mb-md-0">We provide a complete service for the sale, purchase, or rental of real estate.</p>
+                                </div>
+                </div>
+                
+                <div class="row category-container w-75 p-2">
+                                <div class="col-lg col-md-4 col-6 p-3 category-item">
+                                    <div class="dropdown">
+                                        <a class="btn btn-body dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                          For rent
+                                        </a>
+                                        <ul class="dropdown-menu p-2">
+                                          <li><a class="dropdown-item Drop-Item" href="#">For rent</a></li>
+                                          <li><a class="dropdown-item Drop-Item" href="#">For sale</a></li>
+                                        </ul>
+                                      </div>
+                                </div>
+                                <div class="col-lg col-md-4 col-6 p-3 category-item">
+                                    <div class="dropdown">
+                                      <a class="btn btn-body dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Location
+                                      </a>
+                                      <ul class="dropdown-menu p-2" style="max-height: 300px; overflow-y: auto;">
+                                        <li>
+                                          <input type="text" class="form-control mb-2" id="locationSearch" placeholder="Search">
+                                        </li>
+                                        <li><a class="dropdown-item Drop-Item" href="#">New York</a></li>
+                                        <li><a class="dropdown-item Drop-Item" href="#">Los Angeles</a></li>
+                                        <li><a class="dropdown-item Drop-Item" href="#">Chicago</a></li>
+                                        <li><a class="dropdown-item Drop-Item" href="#">Houston</a></li>
+                                        <li><a class="dropdown-item Drop-Item" href="#">Phoenix</a></li>
+                                        <li><a class="dropdown-item Drop-Item" href="#">Philadelphia</a></li>
+                                        <li><a class="dropdown-item Drop-Item" href="#">San Antonio</a></li>
+                                        <li><a class="dropdown-item Drop-Item" href="#">San Diego</a></li>
+                                        <li><a class="dropdown-item Drop-Item" href="#">Dallas</a></li>
+                                        <li><a class="dropdown-item Drop-Item" href="#">San Jose</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg col-md-4 col-12 p-3 category-item">
+                                    <div class="dropdown">
+                                      <a class="btn btn-body dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Property Type
+                                      </a>
+                                      <ul class="dropdown-menu p-2" style="max-height: 300px; overflow-y: auto;">
+                                        <li><a class="dropdown-item  Drop-Item" href="#">Houses</a></li>
+                                        <li><a class="dropdown-item  Drop-Item" href="#">Apartments</a></li>
+                                        <li><a class="dropdown-item  Drop-Item" href="#">Commercial</a></li>
+                                        <li><a class="dropdown-item  Drop-Item" href="#">Daily Rental</a></li>
+                                        <li><a class="dropdown-item  Drop-Item" href="#">Offices</a></li>
+                                        <li><a class="dropdown-item  Drop-Item" href="#">Townhouses</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg col-md-8 col-6 p-3 category-item">
+                                    <div class="d-flex gap-2 track">
+                                      <label for="customRange3" class="form-label mb-0">Price</label>
+                                      <div class="flex-grow-1 position-relative">
+                                        <input type="range" class="form-range thin-range" min="500" max="4000" step="100" id="customRange3" value="2000">
+                                        <span id="rangeValue" class="position-absolute fw-semibold">$2000</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                <div class="col-lg col-md-4 col-6 p-3 px-0 category-item d-flex align-items-center justify-content-center">
+                                    <button class="btn btn-danger py-2 px-4 fw-semibold">Search <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></button>
+                                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+        <!------------------------------------------------------------------------------>
+        <div class="second-block container">
+            <div class="row  category-container">
+                <div class="col-lg col-md-4 col-6 p-4 category-item">
+                    <h5><a href="#">Houses</a></h5>
+                    <p class="category-text"><i class="fa-regular fa-bookmark category-icon"></i>6.4K offers</p>
+                </div>
+                <div class="col-lg col-md-4 col-6 p-4 category-item">
+                    <h5><a href="#">Apartments</a></h5>
+                    <p class="category-text"><i class="fa-regular fa-bookmark category-icon"></i>12.8K offers</p>
+                </div>
+                <div class="col-lg col-md-4 col-6 p-4 category-item">
+                    <h5><a href="#">Commercial</a></h5>
+                    <p class="category-text"><i class="fa-regular fa-bookmark category-icon"></i>9.3K offers</p>
+                </div>
+                <div class="col-lg col-md-4 col-6 p-4 category-item">
+                    <h5><a href="#">Daily Rental</a></h5>
+                    <p class="category-text"><i class="fa-regular fa-bookmark category-icon"></i>42.4K offers</p>
+                </div>
+                <div class="col-lg col-md-4 col-6 p-4 category-item">
+                    <h5><a href="#">New Buildings</a></h5>
+                    <p class="category-text"><i class="fa-regular fa-bookmark category-icon"></i>22.5K offers</p>
+                </div>
+                <div class="col-lg col-md-4 col-6 p-4 category-item dropdown">
+                    <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="hover-border">More</span>
+                        <br>
+                        <img src="./Assets/Images/download (1).svg" class="dropdown-icon me-2" alt="">
+                    </a>
+                    <ul class="dropdown-menu p-2">
+                        <li><a href="#" class="dropdown-item Drop-Item">Offices</a></li>
+                        <li><a href="#" class="dropdown-item Drop-Item">Warehouses</a></li>
+                        <li><a href="#" class="dropdown-item Drop-Item">Retail spaces</a></li>
+                        <li><a href="#" class="dropdown-item Drop-Item">Townhouses</a></li>
+                        <li><a href="#" class="dropdown-item Drop-Item">Vacation homes</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+        <!------------------------------------------------------------------------------>
+        <div class="third-block container">
+            <div class="swiper mySwiper-3">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card left">
+                            <div class="card-body text-center">
+                                <a href="#" class="card-link">
+                                    <img src="./Assets/Images/download (11).svg" alt="">
+                                    <p class="card-text">Buy a Property</p>
+                                    <button class="btn btn-dark p-2 px-3">Find a Home</button>
+                                </a>
+                                <div class="img-container">
+                                    <img src="./Assets/Images/01.png" class="card-img-bottom" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="swiper-slide">
+                        <div class="card mid">
+                            <div class="card-body text-center">
+                                <a href="#" class="card-link">
+                                    <img src="./Assets/Images/download (10).svg" alt="">
+                                    <p class="card-text">Sell a Property</p>
+                                    <button class="btn btn-dark p-2 px-3">Place an ad</button>
+                                </a>
+                                <div class="img-container">
+                                    <img src="./Assets/Images/02 (1).png" class="card-img-bottom" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="swiper-slide">
+                        <div class="card right">
+                            <div class="card-body text-center">
+                                <a href="#" class="card-link">
+                                    <img src="./Assets/Images/download (9).svg" alt="">
+                                    <p class="card-text">Rent a Property</p>
+                                    <button class="btn btn-dark p-2 px-3">Find a rental</button>
+                                </a>
+                                <div class="img-container">
+                                    <img src="./Assets/Images/03.png" class="card-img-bottom" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+        <!------------------------------------------------------------------------------>
+        <div class="fourth-block container">
+            <h1 class="my-5 text-start">Top offers</h1>
+            <div class="swiper mySwiper-4">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="img-container overflow-hidden">
+                                <swiper-container class="mySwiper" navigation="true" pagination="true" keyboard="true"
+                                    mousewheel="true" css-mode="true"
+                                    style="--swiper-navigation-color: white; --swiper-pagination-color: #D95150; --swiper-navigation-size: 16px; --swiper-pagination-bullet-inactive-color: white; --swiper-pagination-bullet-inactive-opacity: 0.8;">
+                                    <swiper-slide>
+                                        <img src="./Assets/Images/01 (4).jpg" alt="Property photo" class="card-img-top active">
+                                    </swiper-slide>
+                                    <swiper-slide><img src="./Assets/Images/01 (4).jpg" alt="Property photo" class="card-img-top"></swiper-slide>
+                                    <swiper-slide><img src="./Assets/Images/01 (4).jpg" alt="Property photo" class="card-img-top"></swiper-slide>
+                                </swiper-container>
+                            </div>
+                            <div class="card-body text-start py-2">
+                                <div class="badg">
+                                    <div class="badge v text-start">Verified <i class="fa-solid fa-shield"></i></div>
+                                    <div class="badge n text-start">New</div>
+                                </div>
+                                <div class="badge mt-2 for">For rent</div>
+                                <p class="price my-3">$1,620</p>
+                                <p class="text-muted">40 S 9th St, Brooklyn, NY 11249</p>
+                                <p class="met">65 sq.m</p>
+                                <p class="card-foot text-secondary">
+                                    2 <img src="./Assets/Images/double-bed.png" alt="">
+                                    1 <img src="./Assets/Images/shower.png" alt="">
+                                    1 <img src="./Assets/Images/garages.png" alt="">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="img-container overflow-hidden">
+                                <swiper-container class="mySwiper" navigation="true" pagination="true" keyboard="true"
+                                    mousewheel="true" css-mode="true"
+                                    style="--swiper-navigation-color: white; --swiper-pagination-color: #D95150; --swiper-navigation-size: 16px; --swiper-pagination-bullet-inactive-color: white; --swiper-pagination-bullet-inactive-opacity: 0.8;">
+                                    <swiper-slide>
+                                        <img src="./Assets/Images/04.jpg" alt="Property photo" class="card-img-top active">
+                                    </swiper-slide>
+                                    <swiper-slide><img src="./Assets/Images/04.jpg" alt="Property photo" class="card-img-top"></swiper-slide>
+                                    <swiper-slide><img src="./Assets/Images/04.jpg" alt="Property photo" class="card-img-top"></swiper-slide>
+                                </swiper-container>
+                            </div>
+                            <div class="card-body text-start py-2">
+                                <div class="badg">
+                                    <div class="badge n text-start">New</div>
+                                </div>
+                                <div class="badge mt-2 for">For rent</div>
+                                <p class="price my-3">$1,170</p>
+                                <p class="text-muted">67-04 Myrtle Ave Glendale, NY 11385</p>
+                                <p class="met">67 sq.m</p>
+                                <p class="card-foot text-secondary">
+                                    1 <img src="./Assets/Images/double-bed.png" alt="">
+                                    1 <img src="./Assets/Images/shower.png" alt="">
+                                    0 <img src="./Assets/Images/garages.png" alt="">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="img-container overflow-hidden">
+                                <swiper-container class="mySwiper" navigation="true" pagination="true" keyboard="true"
+                                    mousewheel="true" css-mode="true"
+                                    style="--swiper-navigation-color: white; --swiper-pagination-color: #D95150; --swiper-navigation-size: 16px; --swiper-pagination-bullet-inactive-color: white; --swiper-pagination-bullet-inactive-opacity: 0.8;">
+                                    <swiper-slide>
+                                        <img src="./Assets/Images/06.jpg" alt="Property photo" class="card-img-top active">
+                                    </swiper-slide>
+                                    <swiper-slide><img src="./Assets/Images/06.jpg" alt="Property photo" class="card-img-top"></swiper-slide>
+                                    <swiper-slide><img src="./Assets/Images/06.jpg" alt="Property photo" class="card-img-top"></swiper-slide>
+                                </swiper-container>
+                            </div>
+                            <div class="card-body text-start py-2">
+                                <div class="badg">
+                                    <div class="badge v text-start">Verified <i class="fa-solid fa-shield"></i></div>
+                                    <div class="badge n text-start">New</div>
+                                </div>
+                                <div class="badge mt-2 for">For sale</div>
+                                <p class="price my-3">$475,000</p>
+                                <p class="text-muted">929 Hart St, Brooklyn, NY 11237</p>
+                                <p class="met">108 sq.m</p>
+                                <p class="card-foot text-secondary">
+                                    3 <img src="./Assets/Images/double-bed.png" alt="">
+                                    2 <img src="./Assets/Images/shower.png" alt="">
+                                    1 <img src="./Assets/Images/garages.png" alt="">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="img-container overflow-hidden">
+                                <swiper-container class="mySwiper" navigation="true" pagination="true" keyboard="true"
+                                    mousewheel="true" css-mode="true"
+                                    style="--swiper-navigation-color: white; --swiper-pagination-color: #D95150; --swiper-navigation-size: 16px; --swiper-pagination-bullet-inactive-color: white; --swiper-pagination-bullet-inactive-opacity: 0.8;">
+                                    <swiper-slide>
+                                        <img src="./Assets/Images/02 (1).jpg" alt="Property photo" class="card-img-top active">
+                                    </swiper-slide>
+                                    <swiper-slide><img src="./Assets/Images/02 (1).jpg" alt="Property photo" class="card-img-top"></swiper-slide>
+                                    <swiper-slide><img src="./Assets/Images/02 (1).jpg" alt="Property photo" class="card-img-top"></swiper-slide>
+                                </swiper-container>
+                            </div>
+                            <div class="card-body text-start py-2">
+                                <div class="badg">
+                                    <div class="badge v text-start">Verified <i class="fa-solid fa-shield"></i></div>
+                                </div>
+                                <div class="badge mt-2 for">For rent</div>
+                                <p class="price my-3">$1,490</p>
+                                <p class="text-muted">123 Bedford Avenue, Brooklyn, NY 11211</p>
+                                <p class="met">80 sq.m</p>
+                                <p class="card-foot text-secondary">
+                                    2 <img src="./Assets/Images/double-bed.png" alt="">
+                                    1 <img src="./Assets/Images/shower.png" alt="">
+                                    1 <img src="./Assets/Images/garages.png" alt="">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="img-container overflow-hidden">
+                                <swiper-container class="mySwiper" navigation="true" pagination="true" keyboard="true"
+                                    mousewheel="true" css-mode="true"
+                                    style="--swiper-navigation-color: white; --swiper-pagination-color: #D95150; --swiper-navigation-size: 16px; --swiper-pagination-bullet-inactive-color: white; --swiper-pagination-bullet-inactive-opacity: 0.8;">
+                                    <swiper-slide>
+                                        <img src="./Assets/Images/02 (2).jpg" alt="Property photo" class="card-img-top active">
+                                    </swiper-slide>
+                                    <swiper-slide><img src="./Assets/Images/01 (4).jpg" alt="Property photo" class="card-img-top"></swiper-slide>
+                                    <swiper-slide><img src="./Assets/Images/01 (4).jpg" alt="Property photo" class="card-img-top"></swiper-slide>
+                                </swiper-container>
+                            </div>
+                            <div class="card-body text-start py-2">
+                                <div class="badg">
+                                    <div class="badge n text-start">New</div>
+                                </div>
+                                <div class="badge mt-2 for">For rent</div>
+                                <p class="price my-3">$1,320</p>
+                                <p class="text-muted">517 82nd St, Brooklyn, NY 11209</p>
+                                <p class="met">45 sq.m</p>
+                                <p class="card-foot text-secondary">
+                                    1 <img src="./Assets/Images/double-bed.png" alt="">
+                                    1 <img src="./Assets/Images/shower.png" alt="">
+                                    0 <img src="./Assets/Images/garages.png" alt="">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+        <!------------------------------------------------------------------------------>
+        <div class="fifth-block">
+            <div class="container">
+                <div class="row">
+                    <h1 class="col my-5 text-start">Added today</h1>
+                    <div class="col out-buttons text-end my-5">
+                        <button class="btn btn-outline-dark rounded-5">Apartments</button>
+                        <button class="btn btn-outline-dark rounded-5">Houses</button>
+                        <button class="btn btn-outline-dark rounded-5">Rooms</button>
+                        <button class="btn btn-outline-dark rounded-5">Commercials</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-12">
+                        <div class="card l">
+                            <div class="img-container">
+                                <img src="./Assets/Images/01.jpg" alt="Property photo" class="card-img-top">
+                                <div class="badg">
+                                    <div class="badge v text-start">Verified <i class="fa-solid fa-shield"></i></div>
+                                    <div class="badge f text-start">Featured</div>
+                                </div>
+                                <div class="details row">
+                                    <p class="col-12 bed-met">3-bed apartment <span class="met">127 sq.m</span></p>
+                                    <p class="col-12 col-lg-6 add">3811 Ditmars Blvd Astoria, NY 11105</p>
+                                    <button class="col-12 col-lg-6 btn btn-danger px-4">From $3,850</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-6 col-12">
+                        <div class="card r mb-3">
+                            <div class="img-container">
+                                <img src="./Assets/Images/02.jpg" alt="Property photo" class="card-img-top">
+                                <div class="badg">
+                                    <div class="badge f text-start">Featured</div>
+                                </div>
+                                <div class="details row">
+                                    <p class="col-12 bed-met">2-bed apartment <span class="met">78 sq.m</span></p>
+                                    <p class="col-12 col-lg-6 add">40 S 9th St, Brooklyn, NY 11249</p>
+                                    <button class="col-12 col-lg-6 btn btn-danger px-4">From $2,600</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card r">
+                            <div class="img-container">
+                                <img src="./Assets/Images/01 (2).jpg" alt="Property photo" class="card-img-top">
+                                <div class="badg">
+                                    <div class="badge f text-start">Featured</div>
+                                </div>
+                                <div class="details row align-items-end">
+                                    <p class="col-12 bed-met">1-bed apartment <span class="met">52 sq.m</span></p>
+                                    <p class="col-12 col-lg-6 add">444 Park Ave, Brooklyn, NY 11205</p>
+                                    <button class="col-12 col-lg-6 btn btn-danger px-4">From $3,850</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+        <!------------------------------------------------------------------------------>
+        <div class="sixth-block container">
+            <div class="row ad-container p-4 px-5">
+                <div class="col-12 col-lg-6 img-container">
+                    <img src="./Assets/Images/building.png" class="img-fluid w-100 h-100 object-cover" alt="">
+                </div>
+        
+                <div class="col-12 col-lg-6 text-container text-white">
+                    <h1>Calculate your property's cost</h1>
+                    <p>Real estate appraisal is a procedure that allows you to determine the average market value of real estate (apartment, house, land, etc.).</p>
+                    <div class="btn btn-danger">Start now</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="clear"></div>
+        <!------------------------------------------------------------------------------>
+        <div class="seventh-block container">
+            <h1 class="text-start mb-5">Search by city</h1>
+            <div class="swiper mySwiper-7">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="img-container">
+                                <img src="./Assets/Images/01 (5).jpg" alt="New York" class="card-img-top">
+                            </div>
+                            <div class="card-body text-center">
+                                <a href="#" class="card-title">New York</a>
+                                <div class="card-foot p-0">
+                                    <div class="row">
+                                        <div class="col-6 txt">
+                                            <i class="fas fa-bolt"></i>
+                                            <div class="card-text">
+                                                <small class="text-secondary for">for sale </small>
+                                                <small class="fw-semibold text-secondary">1739</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <i class="fas fa-tag"></i>
+                                            <div class="card-text">
+                                                <small class="text-secondary for">for rent </small>
+                                                <small class="fw-semibold text-secondary">3845</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="img-container">
+                                <img src="./Assets/Images/02 (3).jpg" alt="Dallas" class="card-img-top">
+                            </div>
+                            <div class="card-body text-center">
+                                <a href="#" class="card-title">Dallas</a>
+                                <div class="card-foot p-0">
+                                    <div class="row">
+                                        <div class="col-6 txt">
+                                            <i class="fas fa-bolt"></i>
+                                            <div class="card-text">
+                                                <small class="text-secondary for">for sale </small>
+                                                <small class="fw-semibold text-secondary">986</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <i class="fas fa-tag"></i>
+                                            <div class="card-text">
+                                                <small class="text-secondary for">for rent </small>
+                                                <small class="fw-semibold text-secondary">2903</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="img-container">
+                                <img src="./Assets/Images/03 (3).jpg" alt="San Francisco" class="card-img-top">
+                            </div>
+                            <div class="card-body text-center">
+                                <a href="#" class="card-title">San Francisco</a>
+                                <div class="card-foot p-0">
+                                    <div class="row">
+                                        <div class="col-6 txt">
+                                            <i class="fas fa-bolt"></i>
+                                            <div class="card-text">
+                                                <small class="text-secondary for">for sale </small>
+                                                <small class="fw-semibold text-secondary">2134</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <i class="fas fa-tag"></i>
+                                            <div class="card-text">
+                                                <small class="text-secondary for">for rent </small>
+                                                <small class="fw-semibold text-secondary">4561</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="img-container">
+                                <img src="./Assets/Images/04 (1).jpg" alt="Los Angeles" class="card-img-top">
+                            </div>
+                            <div class="card-body text-center">
+                                <a href="#" class="card-title">Los Angeles</a>
+                                <div class="card-foot p-0">
+                                    <div class="row">
+                                        <div class="col-6 txt">
+                                            <i class="fas fa-bolt"></i>
+                                            <div class="card-text">
+                                                <small class="text-secondary for">for sale </small>
+                                                <small class="fw-semibold text-secondary">1875</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <i class="fas fa-tag"></i>
+                                            <div class="card-text">
+                                                <small class="text-secondary for">for rent </small>
+                                                <small class="fw-semibold text-secondary">3262</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="img-container">
+                                <img src="./Assets/Images/05.jpg" alt="Chicago" class="card-img-top">
+                            </div>
+                            <div class="card-body text-center">
+                                <a href="#" class="card-title">Chicago</a>
+                                <div class="card-foot p-0">
+                                    <div class="row">
+                                        <div class="col-6 txt">
+                                            <i class="fas fa-bolt"></i>
+                                            <div class="card-text">
+                                                <small class="text-secondary for">for sale </small>
+                                                <small class="fw-semibold text-secondary">1549</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <i class="fas fa-tag"></i>
+                                            <div class="card-text">
+                                                <small class="text-secondary for">for rent </small>
+                                                <small class="fw-semibold text-secondary">2806</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="img-container">
+                                <img src="./Assets/Images/06 (1).jpg" alt="Philadelphia" class="card-img-top">
+                            </div>
+                            <div class="card-body text-center">
+                                <a href="#" class="card-title">Philadelphia</a>
+                                <div class="card-foot p-0">
+                                    <div class="row">
+                                        <div class="col-6 txt">
+                                            <i class="fas fa-bolt"></i>
+                                            <div class="card-text">
+                                                <small class="text-secondary for">for sale </small>
+                                                <small class="fw-semibold text-secondary">874</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <i class="fas fa-tag"></i>
+                                            <div class="card-text">
+                                                <small class="text-secondary for">for rent </small>
+                                                <small class="fw-semibold text-secondary">1625</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+        <!------------------------------------------------------------------------------>
+        <div class="eighth-block">
+            <div class="row">
+                <div class="col text-center my-5">
+                    <h1>Our Partners</h1>
+                </div>
+            </div>
+            <div class="swiper mySwiper-8">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./Assets/Images/download (8).svg" alt="Partner logo">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./Assets/Images/download (7).svg" alt="Partner logo">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./Assets/Images/download (6).svg" alt="Partner logo">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./Assets/Images/download (5).svg" alt="Partner logo">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./Assets/Images/download (4).svg" alt="Partner logo">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        
+        <div class="clear"></div>
+        <!------------------------------------------------------------------------------>
+        <div class="ninth-block container">
+            <div class="row text-center">
+                <div class="col-6 col-lg-3 card d-flex justify-content-center align-items-center">
+                    <div class="img-container rounded-circle bg-secondary-subtle">
+                        <img src="./Assets/Images/01 (1).png" alt="Ivy Taylor" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <a href="#" class="card-title">Ivy Taylor</a>
+                        <p class="card-text">Imperial Property Group Agent</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="icon-link" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="icon-link" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="icon-link" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 card d-flex justify-content-center align-items-center">
+                    <div class="img-container rounded-circle bg-secondary-subtle">
+                        <img src="./Assets/Images/02 (2).png" alt="Floyd Miles" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <a href="#" class="card-title">Floyd Miles</a>
+                        <p class="card-text">Urban Nest Realty Group Agent</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="icon-link" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="icon-link" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="icon-link" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 card d-flex justify-content-center align-items-center">
+                    <div class="img-container rounded-circle bg-secondary-subtle">
+                        <img src="./Assets/Images/03 (1).png" alt="Adrian Frederick" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <a href="#" class="card-title">Adrian Frederick</a>
+                        <p class="card-text">Prime Path Properties Agent</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="icon-link" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="icon-link" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="icon-link" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 card d-flex justify-content-center align-items-center">
+                    <div class="img-container rounded-circle bg-secondary-subtle">
+                        <img src="./Assets/Images/04.png" alt="Hugh Blake" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <a href="#" class="card-title">Hugh Blake</a>
+                        <p class="card-text">Harbor View Real Estate Agent</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="icon-link" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="icon-link" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="icon-link" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+        <!------------------------------------------------------------------------------>
+        <div class="tenth-block container">
+            <h1 class="text-start mb-5">Latest blogs</h1>
+            <div class="swiper mySwiper-10">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="img-container">
+                                <img src="./Assets/Images/01 (3).jpg" alt="What to know when renting an apartment Renting" class="card-img-top">
+                            </div>
+                            <div class="card-body p-1">
+                                <a href="#" class="card-subtitle">RENTING ADVICE</a>
+                                <br>
+                                <a href="#" class="card-title">What to know when renting an apartment Renting</a>
+                                <p class="card-text">It is quite difficult to find a good apartment for long-term rent in large cities. In addition, potential tenants can face prob...</p>
+                                <p class="card-foot">
+                                    <a href="#" class="card-link">by Cody Fisher</a>
+                                    <small class="text-muted">July 09, 2024</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="img-container">
+                                <img src="./Assets/Images/02 (1).jpg" alt="What to know when renting an apartment Renting" class="card-img-top">
+                            </div>
+                            <div class="card-body p-1">
+                                <a href="#" class="card-subtitle">INVESTMENT ADVICE</a>
+                                <br>
+                                <a href="#" class="card-title">What to know when renting an apartment Renting</a>
+                                <p class="card-text">What luxury housing is clear to every person.Housing characterized by increased comfort,interior, quality and ma...</p>
+                                <p class="card-foot">
+                                    <a href="#" class="card-link">by Kristin Watson</a>
+                                    <small class="text-muted">June 26, 2024</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="img-container">
+                                <img src="./Assets/Images/01 (3).jpg" alt="How to modernize your home on a budget" class="card-img-top">
+                            </div>
+                            <div class="card-body p-1">
+                                <a href="#" class="card-subtitle">HOME IMPROVEMENT</a>
+                                <br>
+                                <a href="#" class="card-title">How to modernize your home on a budget</a>
+                                <p class="card-text">Modernizing your home doesn't have to break the bank. Here are some budget-friendly tips to give your living space a mo...</p>
+                                <p class="card-foot">
+                                    <a href="#" class="card-link">by Darrell Steward</a>
+                                    <small class="text-muted">May 13, 2024</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        
+        <div class="clear"></div>
+        <!------------------------------------------------------------------------------>
+        <footer>
+            <div class="container">
+                <div class="row">
+                  <div class="col-4 col-md-3 col-lg-3 d-flex flex-column align-items-start mb-4 mb-lg-0">
+                    <a class="d-inline-flex align-items-center text-decoration-none mb-4" href="#">
+                      <span class="flex-shrink-0 text-primary me-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34">
+                          <path
+                            d="M34.5 16.894v10.731c0 3.506-2.869 6.375-6.375 6.375H17.5h-.85C7.725 33.575.5 26.138.5 17c0-9.35 7.65-17 17-17s17 7.544 17 16.894z"
+                            fill="#D95150" />
+                          <g fill-rule="evenodd">
+                            <path
+                              d="M17.5 13.258c-3.101 0-5.655 2.554-5.655 5.655s2.554 5.655 5.655 5.655 5.655-2.554 5.655-5.655-2.554-5.655-5.655-5.655zm-9.433 5.655c0-5.187 4.246-9.433 9.433-9.433s9.433 4.246 9.433 9.433a9.36 9.36 0 0 1-1.569 5.192l2.397 2.397a1.89 1.89 0 0 1 0 2.671 1.89 1.89 0 0 1-2.671 0l-2.397-2.397a9.36 9.36 0 0 1-5.192 1.569c-5.187 0-9.433-4.246-9.433-9.433z"
+                              fill="#000" fill-opacity=".05" />
+                            <g fill="#fff">
+                              <path
+                                d="M17.394 10.153c-3.723 0-6.741 3.018-6.741 6.741s3.018 6.741 6.741 6.741 6.741-3.018 6.741-6.741-3.018-6.741-6.741-6.741zM7.347 16.894A10.05 10.05 0 0 1 17.394 6.847 10.05 10.05 0 0 1 27.44 16.894 10.05 10.05 0 0 1 17.394 26.94 10.05 10.05 0 0 1 7.347 16.894z" />
+                              <path
+                                d="M23.025 22.525c.645-.645 1.692-.645 2.337 0l3.188 3.188c.645.645.645 1.692 0 2.337s-1.692.645-2.337 0l-3.187-3.187c-.645-.646-.645-1.692 0-2.337z" />
+                            </g>
+                          </g>
+                          <path
+                            d="M23.662 14.663c2.112 0 3.825-1.713 3.825-3.825s-1.713-3.825-3.825-3.825-3.825 1.713-3.825 3.825 1.713 3.825 3.825 3.825z"
+                            fill="#fff" />
+                          <path fill-rule="evenodd"
+                            d="M23.663 8.429a2.41 2.41 0 0 0-2.408 2.408 2.41 2.41 0 0 0 2.408 2.408 2.41 2.41 0 0 0 2.408-2.408 2.41 2.41 0 0 0-2.408-2.408zm-5.242 2.408c0-2.895 2.347-5.242 5.242-5.242s5.242 2.347 5.242 5.242-2.347 5.242-5.242 5.242-5.242-2.347-5.242-5.242z"
+                            fill="#D95150" />
+                        </svg>
+                      </span>
+                      <span class="fs-4 fw-semibold text-light">Finder</span>
+                    </a>
+                    <ul class="list-unstyled a">
+                      <li class="mb-3">
+                        <a href="mailto:contact@example.com">
+                          <i class="fa-regular fa-envelope fs-lg me-2 text-decoration-none" style="color: #ffffff;"></i>contact@example.com
+                        </a>
+                      </li>
+                      <li>
+                        <a href="tel:+15053753082">
+                          <i class="fa-solid fa-phone-volume fs-lg me-2" style="color: #ffffff;"></i>+1 50 537 53 082
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+            
+                  <div class="col-4 col-md-3 col-lg-3 d-flex flex-column align-items-start mb-4 mb-lg-0">
+                    <h5 class="mb-4">Quick links</h5>
+                    <ul class="list-unstyled b">
+                      <li class="mb-2"><a href="#">Daily rental</a></li>
+                      <li class="mb-2"><a href="#">Long-term rental</a></li>
+                      <li class="mb-2"><a href="#">Buy property</a></li>
+                      <li class="mb-2"><a href="#">Sell property</a></li>
+                      <li><a href="#">Popular offers</a></li>
+                    </ul>
+                  </div>
+            
+                  <div class="col-4 col-md-3 col-lg-3 d-flex flex-column align-items-start mb-4 mb-lg-0">
+                    <h5 class="mb-4">Profile</h5>
+                    <ul class="list-unstyled b">
+                      <li class="mb-2"><a href="#">My account</a></li>
+                      <li class="mb-2"><a href="#">My listings</a></li>
+                      <li class="mb-2"><a href="#">Add listings</a></li>
+                      <li class="mb-2"><a href="#">Help center</a></li>
+                      <li><a href="#">Privacy policy</a></li>
+                    </ul>
+                  </div>
+
+                <div class="col-12 col-md-6 col-lg-3 d-flex flex-column align-items-center">
+                    <div class="row">
+                        <h5 class="mb-3 fw-semibold col-4 col-lg-12">Get exclusive advice</h5>
+                        <button class="btn mb-3 p-2 px-5 col-4 col-lg-12" style="width: fit-content;">Sign up</button>
+                        <div class="d-flex gap-4 col-4 col-lg-12">
+                            <a href="#" class="icon-link" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="icon-link" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="icon-link" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <div class="row mt-5 align-items-center s container px-4">
+                    <div class="col-12 col-md-12 col-lg-4 d-flex flex-column text-center text-md-start mb-4 mb-md-0">
+                      <h3>Download Finder App</h3>
+                      <p>Find everything you need for buying, selling, and renting property in our new Finder App!</p>
+                    </div>
+              
+                    <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-center gap-3 mb-4 mb-md-0">
+                      <a href="#" class="btn btn-market btn-lg d-flex align-items-center text-light">
+                        <i class="fa-brands fa-apple lead me-2"></i>
+                        <span>App Store</span>
+                      </a>
+                      <a href="#" class="btn btn-market btn-lg d-flex align-items-center text-light">
+                        <i class="fa-brands fa-google-play lead me-2"></i>
+                        <span>Google Play</span>
+                      </a>
+                    </div>
+              
+                    <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center justify-content-md-end">
+                      <img src="./Assets/Images/app-footer.png" class="img-fluid" alt="">
+                    </div>
+                  </div>
+
+                  <div class="row mt-4">
+                    <div class="col-12 text-center">
+                      <p class="fs-sm mb-0">
+                        © All rights reserved. Made by <a href="#" class="fw-bold text-decoration-none text-primary">Mohamed Samir AKA "MoKnight"</a>
+                      </p>
+                    </div>
+                  </div>
+            </div>
+        </footer>
+        <!------------------------------------------------------------------------------>
+    </main>
+    <script src="./Assets/Vendor/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

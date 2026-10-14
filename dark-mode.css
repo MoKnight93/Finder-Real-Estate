@@ -1,0 +1,303 @@
+html[data-bs-theme="dark"] body {
+    background-color: #101826;
+    color: white;
+}
+html[data-bs-theme="dark"] body .first-block .first-block-background .mi p, html[data-bs-theme="dark"] body .first-block .first-block-background .lf p, html[data-bs-theme="dark"] body .first-block .first-block-background .ri p{
+    color: #101826;
+}
+html[data-bs-theme="dark"] body .first-block .row.category-container{
+    background-color: #101826;
+    border: none;
+}
+html[data-bs-theme="dark"] body .first-block .dropdown-item.Drop-Item{
+    color: rgb(222, 222, 222);
+}
+html[data-bs-theme="dark"] body .first-block .dropdown-item.Drop-Item:hover{
+    color: white;
+    background-color: #333D4C;
+}
+html[data-bs-theme="dark"] body .first-block .dropdown-menu{
+    background-color: #111827;
+}
+html[data-bs-theme="dark"] body .first-block .dropdown .btn.btn-body{
+    color: white;
+}
+html[data-bs-theme="dark"] body input[type="range"].thin-range::-webkit-slider-runnable-track {
+    background: linear-gradient(var(--track-dir, to right),
+            white var(--track-color-percentage, 50%),
+            #333C4D var(--track-color-percentage, 50%)
+        );
+    border-radius: 0.5rem;
+    height: 0.1rem;
+}
+html[data-bs-theme="dark"] body input[type="range"].thin-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    margin-top: -4.8px;
+    background-color: white;
+    border-radius: 0.5rem;
+    height: 0.7rem;
+    width: 0.7rem;
+}
+html[data-bs-theme="dark"] body #rangeValue{
+    color: white;
+}
+html[data-bs-theme="dark"] body .second-block{
+    background-color: #101826;
+}
+html[data-bs-theme="dark"] body .second-block .category-container {
+    background-color: #101826;
+    border-color: #333333;
+}
+
+html[data-bs-theme="dark"] body .second-block .category-item {
+    border-color: #333333;
+}
+
+html[data-bs-theme="dark"] body .second-block .category-item a,
+html[data-bs-theme="dark"] body .second-block .category-item .hover-border {
+    color: #ffffff;
+}
+
+html[data-bs-theme="dark"] body .second-block .category-item a:hover:not(.dropdown-item, .dropdown-toggle),
+html[data-bs-theme="dark"] body .second-block .category-item a:hover .hover-border {
+    border-bottom: 1px solid #ffffff;
+}
+
+html[data-bs-theme="dark"] body .second-block .dropdown-item.Drop-Item {
+    color: #D3D7DF;
+}
+html[data-bs-theme="dark"] body .second-block .dropdown-menu {
+    background-color: #101826;
+}
+
+html[data-bs-theme="dark"] body .second-block .dropdown-item.Drop-Item:hover {
+    background-color: #1D2735;
+}
+html[data-bs-theme="dark"] body .second-block .dropdown-icon {
+    filter: brightness(5);
+}
+html[data-bs-theme="dark"] body .third-block .left, html[data-bs-theme="dark"] body .third-block .right {
+    background-color: #282429;
+}
+html[data-bs-theme="dark"] body .third-block .btn {
+    background-color: white;
+    color: black;
+    border: none;
+}
+html[data-bs-theme="dark"] body .third-block .left .card-body .card-link img,
+html[data-bs-theme="dark"] body .third-block .right .card-body .card-link img {
+    filter: brightness(0) invert(1);
+}
+html[data-bs-theme="dark"] body .third-block .card-body .card-link .card-text {
+    color: white;
+}
+html[data-bs-theme="dark"] body .fourth-block .card{
+    border: 1px solid #6C757D;
+    border-radius: 10px;
+}
+html[data-bs-theme="dark"] body .fourth-block .card-body{
+    background-color: #101826;
+}
+html[data-bs-theme="dark"] body .fourth-block .card-body .for {
+    color: white;
+    background-color: #333C4D;
+
+}
+html[data-bs-theme="dark"] body .fourth-block .card-body .price{
+    color: white;
+}
+html[data-bs-theme="dark"] body .fourth-block .card-body .text-muted{
+    color: #6C757D !important;
+}
+html[data-bs-theme="dark"] body .fourth-block .card-body .met {
+    color: white;
+}
+html[data-bs-theme="dark"] body .fourth-block .card-body .card-foot img {
+    filter: brightness(0) invert(1);
+}
+
+html[data-bs-theme="dark"] body .fifth-block {
+    background-color: #1C2635;
+}
+
+html[data-bs-theme="dark"] body .fifth-block .card {
+    background-color: #1e1e1e;
+}
+
+html[data-bs-theme="dark"] body .fifth-block .card .details {
+    color: #ffffff;
+}
+html[data-bs-theme="dark"] body .seventh-block .card {
+    background-color: #101826;
+    border: 1px solid #6C757D;
+}
+
+html[data-bs-theme="dark"] body .seventh-block .card-body .card-title {
+    color: #ffffff;
+}
+
+html[data-bs-theme="dark"] body .seventh-block .card-body .card-text {
+    color: #b0b0b0;
+}
+html[data-bs-theme="dark"] body .eighth-block {
+    background-color: #1C2635;
+}
+html[data-bs-theme="dark"] body .ninth-block .card {
+    background-color: #101826;
+}
+
+html[data-bs-theme="dark"] body .ninth-block .card-body a {
+    color: #ffffff;
+}
+html[data-bs-theme="dark"] body .ninth-block .card-text{
+    color: lightgrey;
+}
+html[data-bs-theme="dark"] body .ninth-block .card-body a:hover {
+    border-bottom: 1px solid white;
+}
+
+html[data-bs-theme="dark"] body .tenth-block .card {
+    background-color: #101826;
+}
+
+html[data-bs-theme="dark"] body .tenth-block .card-body .card-title {
+    color: #ffffff;
+}
+
+html[data-bs-theme="dark"] body .tenth-block .card-body .card-text {
+    color: #b0b0b0;
+}
+html[data-bs-theme="dark"] body .tenth-block .card-body .card-link {
+    color: #cdcdcd;
+}
+
+html[data-bs-theme="dark"] body footer {
+    background-color: #101826;
+}
+
+html[data-bs-theme="dark"] body footer .list-unstyled.a a {
+    color: #ffffff;
+}
+
+html[data-bs-theme="dark"] body footer .list-unstyled.b a {
+    color: #ffffff;
+}
+
+html[data-bs-theme="dark"] body footer button.btn {
+    border-color: #333333;
+}
+
+html[data-bs-theme="dark"] body footer button.btn:hover {
+    border-color: #ffffff;
+}
+
+html[data-bs-theme="dark"] body footer .row.s {
+    background-color: #1C2635;
+}
+
+html[data-bs-theme="dark"] body footer .row.s p {
+    color: #b0b0b0;
+}
+
+html[data-bs-theme="dark"] body footer .btn.btn-market {
+    background-color: #333C4D;
+}
+
+html[data-bs-theme="dark"] body footer .btn.btn-market:hover {
+    background-color: #444444;
+}
+/* ---------- additions ---------- */
+
+/* Firefox slider (webkit rules above do nothing there) */
+html[data-bs-theme="dark"] body input[type="range"].thin-range::-moz-range-track {
+    background: linear-gradient(var(--track-dir, to right),
+            white var(--track-color-percentage, 50%),
+            #333C4D var(--track-color-percentage, 50%));
+    border-radius: 0.5rem;
+    height: 0.1rem;
+}
+html[data-bs-theme="dark"] body input[type="range"].thin-range::-moz-range-thumb {
+    background-color: white;
+    border: none;
+    border-radius: 0.5rem;
+    height: 0.7rem;
+    width: 0.7rem;
+}
+
+/* Header / navbar (was staying light in dark mode) */
+html[data-bs-theme="dark"] body header .navbar {
+    --bs-tertiary-bg-rgb: 16, 24, 38;
+    border-bottom: 1px solid #1d2735;
+}
+html[data-bs-theme="dark"] body header .nav-link {
+    color: #c9cfd9;
+}
+html[data-bs-theme="dark"] body header .nav-link:hover,
+html[data-bs-theme="dark"] body header .nav-link.active {
+    color: #ffffff;
+    background-color: #1d2735;
+}
+html[data-bs-theme="dark"] body header .dropdown-menu {
+    background-color: #111827;
+    border-color: #333d4c;
+}
+html[data-bs-theme="dark"] body header .dropdown-header {
+    color: #ffffff;
+}
+html[data-bs-theme="dark"] body header .dropdown-item.Drop-Item,
+html[data-bs-theme="dark"] body header .dropdown-item {
+    color: #d3d7df;
+}
+html[data-bs-theme="dark"] body header .dropdown-item.Drop-Item:hover,
+html[data-bs-theme="dark"] body header .dropdown-item:hover,
+html[data-bs-theme="dark"] body header .dropdown-item.active {
+    color: #ffffff;
+    background-color: #1d2735;
+}
+html[data-bs-theme="dark"] body header .icon-lg,
+html[data-bs-theme="dark"] body header .dropdown-icon {
+    filter: brightness(0) invert(1);
+    opacity: 0.8;
+}
+html[data-bs-theme="dark"] body header .navbar-toggler-icon {
+    filter: invert(1);
+}
+html[data-bs-theme="dark"] body header .offcanvas {
+    background-color: #101826;
+}
+html[data-bs-theme="dark"] body .scroll-indicator {
+    background-color: #333c4d;
+}
+
+/* Hero text + search box */
+html[data-bs-theme="dark"] body .first-block .text-center p {
+    color: #b0b8c4;
+}
+html[data-bs-theme="dark"] body .first-block .form-control {
+    background-color: transparent;
+    color: #ffffff;
+    border-bottom-color: #333d4c;
+}
+html[data-bs-theme="dark"] body .first-block .category-item {
+    border-color: #333d4c;
+}
+
+/* Filter pills in "Added today" were dark-on-dark */
+html[data-bs-theme="dark"] body .fifth-block .btn-outline-dark {
+    --bs-btn-color: #ffffff;
+    --bs-btn-border-color: #6c757d;
+    --bs-btn-hover-color: #101826;
+    --bs-btn-hover-bg: #ffffff;
+    --bs-btn-hover-border-color: #ffffff;
+    --bs-btn-active-color: #101826;
+    --bs-btn-active-bg: #ffffff;
+}
+
+/* Social icons */
+html[data-bs-theme="dark"] body .icon-link {
+    color: #cdd3dc;
+}
+html[data-bs-theme="dark"] body .icon-link:hover {
+    color: #ffffff;
+}

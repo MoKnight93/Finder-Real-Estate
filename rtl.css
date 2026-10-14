@@ -1,0 +1,28 @@
+/*
+ * RTL / Arabic additions (index.html only)
+ *
+ * Layout direction comes from <html dir="rtl"> + Bootstrap's own bootstrap.rtl.min.css,
+ * which already mirrors the grid, spacing (ms-/me-), text-start/end, dropdowns and offcanvas.
+ * style.css uses logical properties (inline-start / inline-end), so it mirrors by itself.
+ * This file only holds what is genuinely Arabic-specific.
+ */
+
+/* Arabic font (Cairo is loaded from Google Fonts in index.html) */
+html[lang="ar"] {
+    --bs-body-font-family: 'Cairo', 'Inter', system-ui, -apple-system, 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* Arabic is a connected script - letter-spacing must stay at 0 */
+html[lang="ar"] body {
+    letter-spacing: 0;
+}
+
+/* Price bubble above the slider: shift the other way so it stays centred on the thumb */
+html[dir="rtl"] #rangeValue {
+    --label-shift: 50%;
+}
+
+/* Numbers, prices, e-mail and phone numbers keep their own direction inside Arabic text */
+html[dir="rtl"] bdi {
+    unicode-bidi: isolate;
+}
